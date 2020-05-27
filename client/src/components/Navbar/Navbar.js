@@ -81,7 +81,24 @@ export default function TemporaryDrawer() {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-    >
+      >
+    
+      <Link href={`/user/${localStorage.getItem('id')}`} className={classes.link}>
+      <List>
+        <ListItem button key='View Gardens'>
+          <ListItemIcon><LocalFloristIcon /></ListItemIcon>
+          <ListItemText primary='View Gardens' />
+        </ListItem>
+      </List>
+    </Link>
+    <Link href={`/info/${localStorage.getItem('id')}`} className={classes.link}>
+      <List>
+        <ListItem button key='Profile Info'>
+          <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+          <ListItemText primary='Profile Info' />
+        </ListItem>
+      </List>
+    </Link>
       <Link href="/" className={classes.link}>
         <List>
           <ListItem button key='Search Plants'>
@@ -90,7 +107,7 @@ export default function TemporaryDrawer() {
           </ListItem>
         </List>
       </Link>
-      
+
       <Link href={`/creategarden/${localStorage.getItem('id')}`} className={classes.link}>
         <List>
           <ListItem button key='Create Gardens'>
@@ -100,14 +117,6 @@ export default function TemporaryDrawer() {
         </List>
       </Link>
 
-      <Link href={`/user/${localStorage.getItem('id')}`} className={classes.link}>
-        <List>
-          <ListItem button key='View Gardens'>
-            <ListItemIcon><LocalFloristIcon /></ListItemIcon>
-            <ListItemText primary='View Gardens' />
-          </ListItem>
-        </List>
-      </Link>
       <Link href={`/info/${localStorage.getItem('id')}`} className={classes.link}>
         <List>
           <ListItem button key='Profile Info'>
