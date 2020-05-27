@@ -9,23 +9,24 @@ import {
     Button
 } from '@material-ui/core'
 import { green } from '@material-ui/core/colors'
+const gardenPic = require('./GardenCrop2.jpg')
 
 const useStyles = makeStyles((theme) => ({
     avatar: {
         color: theme.palette.getContrastText(green[300]),
         backgroundColor: green[300],
-        marginRight: 0,
+        marginRight: 20,
         [theme.breakpoints.down('sm')]: {
-            width: 100,
-            height: 100
+            width: 40,
+            height: 40
         },
         [theme.breakpoints.up('md')]: {
-            width: 150,
-            height: 150
+            width: 80,
+            height: 80
         },
         [theme.breakpoints.up('lg')]: {
-            width: 200,
-            height: 200
+            width: 80,
+            height: 80
         }
     },
     avatarDiv: {
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
     username: {
         display: 'flex',
-        justifyContent: 'space-around',
+        justifyContent: 'center',
         fontSize: 64,
         [theme.breakpoints.down('sm')]: {
             fontSize: 32
@@ -77,6 +78,11 @@ const useStyles = makeStyles((theme) => ({
     },
     infoContainer: {
         marginTop: 10
+    },
+    gardenPic: {
+        width: '100%',
+        marginBottom: 10
+
     }
 }));
 
@@ -92,15 +98,18 @@ const ProfileHeader = (props) => {
     return (
         <Container className={classes.root}>
             <Grid item xs={12}>
-                <div className={classes.avatarDiv}>
-                    <Avatar className={classes.avatar}>{avatarLetters()}</Avatar>
+                <div>
+                    <img className={classes.gardenPic} alt="garden picture" src={gardenPic}></img>  
                 </div>
+            </Grid>
+            <Grid item xs={12}>
                 <div className={classes.usernameDiv}>
-                    <Typography variant='h2' className={classes.username}>
-                        {props.username}
+                    <Typography  variant='h2' className={classes.username}>
+                        <Avatar className={classes.avatar}>{avatarLetters()}</Avatar> {props.username}
                     </Typography>
                 </div>
             </Grid>
+            
             <Grid item xs={12} className={classes.infoContainer}>
                 <hr />
                 <div className={classes.infoDiv}>
@@ -129,7 +138,7 @@ const ProfileHeader = (props) => {
                     >Edit Garden</Button>
                 </div>
             </Grid>
-        </Container>
+       </Container>
     )
 }
 
