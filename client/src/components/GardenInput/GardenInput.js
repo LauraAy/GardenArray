@@ -215,7 +215,7 @@ export default function HorizontalLinearStepper() {
   }
 
   const addPlants = () => {
-    window.location.replace(`/`)
+    window.location.replace(`/searchplant`)
   }
 
   // const handleReset = () => {

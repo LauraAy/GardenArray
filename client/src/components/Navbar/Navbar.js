@@ -108,7 +108,7 @@ export default function TemporaryDrawer() {
         </List>
       </Link>
 
-      <Link href="/" className={classes.link}>
+      <Link href="/searchplant" className={classes.link}>
         <List>
           <ListItem button key='Search Plants'>
             <ListItemIcon><SearchIcon /></ListItemIcon>
