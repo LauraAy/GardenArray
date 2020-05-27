@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom'
-import Home from './pages/Home'
+import SearchPlant from './pages/SearchPlant'
 import SignUp from './pages/SignUp'
 import LogIn from './pages/SignIn'
 import Profile from './pages/Profile'
@@ -486,7 +486,7 @@ function App() {
           <PlantInfoContext.Provider value={plantInfoState}>
             <PlantContext.Provider value={plantState}>
               <ThemeProvider theme={theme} >
-                <Route exact path="/" component={Home} />
+                <Route exact path="/" component={SearchPlant} />
                 <Route exact path="/signup" component={SignUp} />
                 <Route exact path="/signin" component={LogIn} />
                 <Route path="/user/:userid" component={Profile} />

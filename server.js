@@ -14,5 +14,5 @@ app.get('/*', (req, res) => {
 })
 
 require('./config')
-  .then(() => app.listen(process.env.PORT || 3000))
+  .then(() => app.listen(process.env.PORT || 3001))
   .catch(e => console.error(e))
