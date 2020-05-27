@@ -14,13 +14,14 @@ import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import PlantContext from '../../utils/PlantContext'
 import PlantInfoContext from '../../utils/PlantInfoContext'
+import { green } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
     root: {
         width: '100%',
     },
     heading: {
-        fontSize: theme.typography.pxToRem(15),
+        fontSize: theme.typography.pxToRem(20),
         fontWeight: theme.typography.fontWeightRegular,
     },
     listItemDiv: {
@@ -39,6 +40,14 @@ const useStyles = makeStyles((theme) => ({
     },
     menuItem: {
         fontSize: 14
+    },
+    gardenTitle: {
+        fontSize: 25,
+    },
+    gardenDiv: {
+        backgroundColor: green[200],
+        marginTop: 10,
+        marginBottom: 10
     }
 }));
 
@@ -50,13 +59,16 @@ export default function SimpleExpansionPanel(props) {
     return (
         <div className={classes.root}>
             <ExpansionPanel disabled={props.disabled}>
+                <div className={classes.gardenDiv}>
                 <ExpansionPanelSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
-                    id="panel1a-header"
-                >
-                    <Typography className={classes.heading}>{props.title}</Typography>
+                    id="panel1a-header">
+        
+                <Typography className={classes.gardenTitle}>{props.title}</Typography>
+                  
                 </ExpansionPanelSummary>
+                </div>
                 <Typography className={classes.heading}>Description: {props.about}</Typography>
                 <Typography className={classes.heading}>Location: {props.location}</Typography>
                 {props.plants.length > 0 ?
