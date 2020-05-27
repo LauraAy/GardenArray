@@ -14,7 +14,7 @@ import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 import PlantContext from '../../utils/PlantContext'
 import PlantInfoContext from '../../utils/PlantInfoContext'
-import { green } from '@material-ui/core/colors'
+import { lightGreen } from '@material-ui/core/colors'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 25,
     },
     gardenDiv: {
-        backgroundColor: green[200],
+        backgroundColor: lightGreen[200],
         marginTop: 10,
         marginBottom: 10
     }
@@ -71,6 +71,7 @@ export default function SimpleExpansionPanel(props) {
                 </div>
                 <Typography className={classes.heading}>Description: {props.about}</Typography>
                 <Typography className={classes.heading}>Location: {props.location}</Typography>
+                <Typography className={classes.heading}> {props.my_garden}</Typography>
                 {props.plants.length > 0 ?
                     props.plants.map((data, i) => (
                         <Card key={i} className={classes.root}>

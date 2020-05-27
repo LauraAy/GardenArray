@@ -189,6 +189,7 @@ const Profile = () => {
                                                             location={data.location}
                                                             plants={data.plants}
                                                             gardenId={data._id}
+                                                            my_garden={data.my_garden}
                                                         />)
                                                     )) :
                                                     <GardenDisplay
