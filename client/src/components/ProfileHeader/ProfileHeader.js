@@ -9,7 +9,7 @@ import {
     Button
 } from '@material-ui/core'
 import { green } from '@material-ui/core/colors'
-const gardenPic = require('./GardenCrop1.jpg')
+const gardenPic = require('./GardenCrop2.jpg')
 
 const useStyles = makeStyles((theme) => ({
     avatar: {
@@ -80,7 +80,9 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 10
     },
     gardenPic: {
-        width: '100%'
+        width: '100%',
+        marginBottom: 10
+
     }
 }));
 
@@ -97,8 +99,7 @@ const ProfileHeader = (props) => {
         <Container className={classes.root}>
             <Grid item xs={12}>
                 <div>
-                    <img className={classes.gardenPic} alt="garden picture" src={gardenPic}></img>
-                  
+                    <img className={classes.gardenPic} alt="garden picture" src={gardenPic}></img>  
                 </div>
             </Grid>
             <Grid item xs={12}>
@@ -137,7 +138,7 @@ const ProfileHeader = (props) => {
                     >Edit Garden</Button>
                 </div>
             </Grid>
-        </Container>
+       </Container>
     )
 }
 
