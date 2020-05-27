@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     },
     gardenTitle: {
         fontSize: 25,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 16
+        }
     },
     gardenDiv: {
         backgroundColor: lightGreen[200],
