@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
     },
     gardenTitle: {
         fontSize: 25,
+        [theme.breakpoints.down('sm')]: {
+            fontSize: 16
+        }
     },
     gardenDiv: {
         backgroundColor: lightGreen[200],
@@ -115,7 +118,7 @@ export default function SimpleExpansionPanel(props) {
                     size='small'
                     className={classes.addPlantBtn}
                     variant="outlined"
-                    onClick={() => window.location.replace('/')}
+                    onClick={() => window.location.replace('/searchplant')}
                 ><AddIcon />Add Plant(s)</Button>
                 <Divider />
             </ExpansionPanel>

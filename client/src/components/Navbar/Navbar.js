@@ -14,12 +14,19 @@ import MenuIcon from '@material-ui/icons/Menu';
 import LocalFloristIcon from '@material-ui/icons/LocalFlorist';
 import SearchIcon from '@material-ui/icons/Search';
 import EmojiNatureIcon from '@material-ui/icons/EmojiNature';
-import { Link } from '@material-ui/core'
-import UserContext from '../../utils/UserContext'
+import { Link, withTheme } from '@material-ui/core';
+import UserContext from '../../utils/UserContext';
+import { lightGreen } from '@material-ui/core/colors'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    display: 'flex'
+    display: 'flex',
+    position: 'fixed',
+    top: 0,
+    backgroundColor: lightGreen[50],
+    marginBottom: 10,
+    width: '100%'
+   
   },
   list: {
     width: 250,
@@ -101,7 +108,7 @@ export default function TemporaryDrawer() {
         </List>
       </Link>
 
-      <Link href="/" className={classes.link}>
+      <Link href="/searchplant" className={classes.link}>
         <List>
           <ListItem button key='Search Plants'>
             <ListItemIcon><SearchIcon /></ListItemIcon>
@@ -143,7 +150,7 @@ export default function TemporaryDrawer() {
             {list(headerState.anchorXL)}
           </Drawer>
         </React.Fragment>
-        <Link href='/'>
+        <Link href='/user/:userid'>
           <img src='https://i.imgur.com/lwEAqtD.png' alt='garden-array-logo' className={classes.logoImg} />
         </Link>
       </div>

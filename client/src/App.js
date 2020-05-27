@@ -486,7 +486,10 @@ function App() {
           <PlantInfoContext.Provider value={plantInfoState}>
             <PlantContext.Provider value={plantState}>
               <ThemeProvider theme={theme} >
-                <Route exact path="/" component={SearchPlant} />
+                <Route exact path="/">
+                  <Redirect to="/user/:userid" />
+                </Route>
+                <Route exact path="/searchplant" component={SearchPlant} />
                 <Route exact path="/signup" component={SignUp} />
                 <Route exact path="/signin" component={LogIn} />
                 <Route path="/user/:userid" component={Profile} />

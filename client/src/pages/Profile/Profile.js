@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         '& > *': {
-            marginTop: '0',
+            marginTop: 0,
         },
         marginBottom: '3rem'
     },

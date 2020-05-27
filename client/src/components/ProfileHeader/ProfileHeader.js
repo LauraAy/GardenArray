@@ -81,7 +81,8 @@ const useStyles = makeStyles((theme) => ({
     },
     gardenPic: {
         width: '100%',
-        marginBottom: 10
+        marginBottom: 10,
+        marginTop: 45
 
     }
 }));
