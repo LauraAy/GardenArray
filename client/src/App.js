@@ -16,7 +16,8 @@ import PlantInfo from './pages/PlantInfo'
 import SavedPlantInfo from './pages/SavedPlantInfo'
 import Garden from './utils/Garden'
 import GardenContext from './utils/GardenContext';
-import PlantInfoContext from './utils/PlantInfoContext'
+import PlantInfoContext from './utils/PlantInfoContext';
+import { Redirect } from 'react-router';
 
 function App() {
 
