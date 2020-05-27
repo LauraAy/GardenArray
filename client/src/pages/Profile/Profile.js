@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         display: 'flex',
         '& > *': {
-            marginTop: '4rem',
+            marginTop: '0',
         },
         marginBottom: '3rem'
     },
@@ -45,7 +45,11 @@ const useStyles = makeStyles((theme) => ({
     },
     gardensTitle: {
         fontWeight: 'bold',
-        margin: 8
+        fontSize: 40,
+        [theme.breakpoints.down('sm')]: {
+        fontSize: 20
+        },
+        margin: 8,
     },
     divider: {
         margin: 12
