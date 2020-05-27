@@ -145,8 +145,8 @@ function getStepContent(
           <FormControl component="fieldset">
             <FormLabel component="legend">Who's garden is this?</FormLabel>
             <RadioGroup aria-label="Whose Garden" name="my_garden" value={my_garden} onChange={handleGardenInputChange}>
-              <FormControlLabel value="myGarden" control={<Radio />} label="This is my wonderful garden!" />
-              <FormControlLabel value="otherGarden" control={<Radio />} label="A garden I've visited or want to visit someday!" />
+              <FormControlLabel value="My Garden" control={<Radio />} label="This is my wonderful garden!" />
+              <FormControlLabel value="Another Garden" control={<Radio />} label="A garden I've visited or want to visit someday!" />
             </RadioGroup>
           </FormControl>
         </Container>

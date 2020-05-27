@@ -91,7 +91,7 @@ export default function TemporaryDrawer() {
           </ListItem>
         </List>
       </Link>
-      
+
       <Link href={`/creategarden/${localStorage.getItem('id')}`} className={classes.link}>
         <List>
           <ListItem button key='Create Gardens'>
@@ -100,7 +100,7 @@ export default function TemporaryDrawer() {
           </ListItem>
         </List>
       </Link>
-      
+
       <Link href="/" className={classes.link}>
         <List>
           <ListItem button key='Search Plants'>
