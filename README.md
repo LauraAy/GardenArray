@@ -4,5 +4,6 @@ An application to help keep track of the plants in your garden, using the Trefle
 
 This application was project 3 for the UCI bootcamp, and was a 4 person collaborative project. It is built with a mongoDB backend and a REACT JS front end. 
 
+The deployed version: https://peaceful-bastion-92887.herokuapp.com/signin
 
 
